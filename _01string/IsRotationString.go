@@ -11,7 +11,7 @@ func main() {
 
 }
 
-func IsRotationString(s1 string, s2 string) bool  {
+func IsRotationString(s1 string, s2 string) bool {
 	s1s1 := s1 + s1
 	return strings.Contains(s1s1, s2)
 }
