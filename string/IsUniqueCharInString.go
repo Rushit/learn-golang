@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(isUniqueCharInString("asdfasdfasdfa"));
-	fmt.Println(isUniqueCharInString("abcdefghijklmnopqrstuvwxyz"));
+	fmt.Println(isUniqueCharInString("asdfasdfasdfa#$%"));
+	fmt.Println(isUniqueCharInString("abcdefghijklmnopqrstuvwxyz#$%"));
 }
 
 func isUniqueCharInString(str string) bool {
