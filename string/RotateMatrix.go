@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 func main() {
 	matrix := [][]int{
 		{1, 2, 3},
@@ -33,8 +32,8 @@ func RotateMatrix(matrix [][]int, row int) {
 	}
 }
 
-func PrintMatrix(matrix [][]int)  {
-	for i:= range matrix {
+func PrintMatrix(matrix [][]int) {
+	for i := range matrix {
 		fmt.Println(matrix[i])
 	}
 }

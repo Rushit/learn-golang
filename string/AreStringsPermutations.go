@@ -12,7 +12,7 @@ func main() {
 }
 
 func AreStringPermutation(str1 string, str2 string) bool {
-	if(len(str1) != len(str2)) {
+	if (len(str1) != len(str2)) {
 		return false
 	};
 	sorted1 := SortString(str1)

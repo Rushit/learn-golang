@@ -28,7 +28,7 @@ func CompressString(str string) string {
 			continue
 		}
 
-		if(str[i-1] == str[i]){
+		if (str[i - 1] == str[i]) {
 			currentCharCount = currentCharCount + 1
 		} else {
 			stringBuffer.WriteString(strconv.Itoa(currentCharCount))
