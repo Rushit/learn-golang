@@ -52,7 +52,10 @@ func (l *LinkedList) Delete(node *LinkedList) *LinkedList {
 func (l *LinkedList) Print() {
 	currentNode := l
 	for ; currentNode != nil; {
-		fmt.Print(strconv.Itoa(currentNode.Data) + ",")
+		fmt.Print(strconv.Itoa(currentNode.Data))
+		if(currentNode.Next != nil) {
+			fmt.Print(",")
+		}
 		currentNode = currentNode.Next
 	}
 	fmt.Println("")
