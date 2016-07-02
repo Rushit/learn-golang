@@ -6,6 +6,13 @@ import (
 	"strings"
 )
 
+/**
+  6,1,7
++ 3,9,5
+--------
+1,0,1,2
+ */
+
 func main() {
 	num1 := &ll.LinkedList{nil, 7}
 	num1.Add(1).Add(6)
