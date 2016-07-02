@@ -9,6 +9,10 @@ func main() {
 	head := &ll.LinkedList{nil, 1}
 	head.Add(2).Add(3).Add(4).Add(3).Add(2).Add(1)
 	fmt.Println(IsPalindromeLinkedList(head))
+
+	head2 := &ll.LinkedList{nil, 1}
+	head2.Add(2).Add(3)
+	fmt.Println(IsPalindromeLinkedList(head2))
 }
 
 func IsPalindromeLinkedList(list *ll.LinkedList) bool {
