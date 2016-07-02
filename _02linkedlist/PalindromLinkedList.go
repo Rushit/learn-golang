@@ -15,8 +15,8 @@ func IsPalindromeLinkedList(list *ll.LinkedList) bool {
 	var reverseList *ll.LinkedList = nil
 
 	currentNode := list
-	for ; currentNode != nil;  {
-		if(reverseList == nil) {
+	for ; currentNode != nil; {
+		if (reverseList == nil) {
 			reverseList = &ll.LinkedList{nil, currentNode.Data}
 		} else {
 			newNode := &ll.LinkedList{reverseList, currentNode.Data }
@@ -26,8 +26,8 @@ func IsPalindromeLinkedList(list *ll.LinkedList) bool {
 	}
 
 	currentNode = list
-	for ; currentNode != nil;  {
-		if(reverseList.Data != currentNode.Data) {
+	for ; currentNode != nil; {
+		if (reverseList.Data != currentNode.Data) {
 			return false
 		}
 		reverseList = reverseList.Next

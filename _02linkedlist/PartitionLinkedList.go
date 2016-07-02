@@ -34,7 +34,7 @@ func PartitionLinkedList(head *ll.LinkedList, data int) *ll.LinkedList {
 		currentNode = next
 	}
 
-	if(middleNode != nil){
+	if (middleNode != nil) {
 		middleNode.Next = rightStart
 		rightStart = middleNode
 	}

@@ -38,14 +38,14 @@ func SumNumbersWithLinkedList(num1 *ll.LinkedList, num2 *ll.LinkedList) *ll.Link
 
 		sumDigit := sum
 		carry = 0
-		if(sum > 9) {
+		if (sum > 9) {
 			sumStr := strconv.Itoa(sum) //guaranted to be two digit only
 			s := strings.Split(sumStr, "")
 			carry, _ = strconv.Atoi(s[0])
 			sumDigit, _ = strconv.Atoi(s[1])
 		}
 
-		if(sumLL == nil) {
+		if (sumLL == nil) {
 			sumLL = &ll.LinkedList{nil, sumDigit}
 			sumHead = sumLL
 		} else {
@@ -67,11 +67,11 @@ func SumNumbersWithLinkedList(num1 *ll.LinkedList, num2 *ll.LinkedList) *ll.Link
 func sum(num1 *ll.LinkedList, num2 *ll.LinkedList, carry int) int {
 	sum := 0
 
-	if(num1 != nil) {
+	if (num1 != nil) {
 		sum += num1.Data
 	}
 
-	if(num2 != nil) {
+	if (num2 != nil) {
 		sum += num2.Data
 	}
 
