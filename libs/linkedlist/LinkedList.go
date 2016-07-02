@@ -21,6 +21,19 @@ func (l *LinkedList) Add(data int) *LinkedList {
 	return l
 }
 
+/**
+ *	Used to create circular linkedlist
+ */
+func (l *LinkedList) AddNode(newNode *LinkedList) *LinkedList {
+	currentNode := l;
+	for ; currentNode.Next != nil; {
+		currentNode = currentNode.Next
+	}
+	currentNode.Next = newNode
+
+	return l
+}
+
 func (l *LinkedList) SearchNode(data int) *LinkedList {
 	currentNode := l;
 	for ; currentNode != nil; {
@@ -55,7 +68,7 @@ func (l *LinkedList) Print() {
 	currentNode := l
 	for ; currentNode != nil; {
 		fmt.Print(strconv.Itoa(currentNode.Data))
-		if(currentNode.Next != nil) {
+		if (currentNode.Next != nil) {
 			fmt.Print(",")
 		}
 		currentNode = currentNode.Next
@@ -63,12 +76,11 @@ func (l *LinkedList) Print() {
 	fmt.Println("")
 }
 
-
 func (l *LinkedList) ReversePrint() {
 	var newHead *LinkedList = nil
 	currentNode := l
 	for ; currentNode != nil; {
-		if(newHead == nil) {
+		if (newHead == nil) {
 			newHead = &LinkedList{nil, currentNode.Data}
 		} else {
 			newNode := &LinkedList{nil, currentNode.Data}
