@@ -33,12 +33,16 @@ func createSource(num int) (*[]int) {
 func MoveDisk(n int, source *[]int, buffer *[]int, target *[]int) {
 	if n > 0 {
 		MoveDisk(n - 1, source, target, buffer)
-		if len(*source) > 0 {
-			disk := (*source)[len(*source) - 1]
-			*source = (*source)[:(len(*source) - 1)]
-			*target = append((*target), disk)
-		}
+		moveTop(source, target)
 		MoveDisk(n - 1, buffer, source, target)
+	}
+}
+
+func moveTop(source *[]int, target *[]int) {
+	if len(*source) > 0 {
+		disk := (*source)[len(*source) - 1]
+		*source = (*source)[:(len(*source) - 1)]
+		*target = append((*target), disk)
 	}
 }
 
