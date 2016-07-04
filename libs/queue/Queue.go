@@ -6,13 +6,13 @@ import (
 
 type Queue struct {
 	front *ll.LinkedList
-	rear *ll.LinkedList
-	Size int
+	rear  *ll.LinkedList
+	Size  int
 }
 
-func (q *Queue) Enqueue(data int)  {
+func (q *Queue) Enqueue(data int) {
 	newNode := &ll.LinkedList{nil, data}
-	if(q.front == nil) {
+	if (q.front == nil) {
 		q.front = newNode
 		q.rear = newNode
 	} else {
@@ -22,8 +22,8 @@ func (q *Queue) Enqueue(data int)  {
 	q.Size++
 }
 
-func (q *Queue) Dequeue() (int, error)  {
-	if(q.front == nil) {
+func (q *Queue) Dequeue() (int, error) {
+	if (q.front == nil) {
 		return nil, error{"Queue is empty"}
 	}
 	result := q.front.Data

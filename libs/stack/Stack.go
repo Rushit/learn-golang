@@ -5,11 +5,11 @@ import (
 )
 
 type Stack struct {
-	top *ll.LinkedList
+	top  *ll.LinkedList
 	Size int
 }
 
-func (s *Stack) Push(data int)  {
+func (s *Stack) Push(data int) {
 	if s.top == nil {
 		s.top = &ll.LinkedList{nil, data}
 	} else {
@@ -19,8 +19,8 @@ func (s *Stack) Push(data int)  {
 	s.Size++
 }
 
-func (s *Stack) Pop() (int, error)  {
-	if(s.top == nil) {
+func (s *Stack) Pop() (int, error) {
+	if (s.top == nil) {
 		return nil, error{"Stack is empty"}
 	}
 	result := s.top.Data
@@ -30,7 +30,7 @@ func (s *Stack) Pop() (int, error)  {
 }
 
 func (s *Stack) Peek() (int, error) {
-	if(s.top == nil) {
+	if (s.top == nil) {
 		return nil, error{"Stack is empty"}
 	}
 	return s.top.Data, nil
