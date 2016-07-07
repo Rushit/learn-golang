@@ -22,13 +22,13 @@ func fib(n int, cache map[int]int) int {
 }
 
 func fib2(n int) int {
-	var table = make([]int, n+1)
+	var table = make([]int, n + 1)
 
 	table[0] = 0
 	table[1] = 1
 
 	for i := 2; i <= n; i++ {
-		table[i] = table[i-1] + table[i-2]
+		table[i] = table[i - 1] + table[i - 2]
 	}
 
 	return table[n]
